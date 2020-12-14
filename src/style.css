@@ -319,11 +319,11 @@ a:focus {
   margin-bottom: var(--spacing-8);
 }
 
-button:hover {
+button :hover {
   background: #545859;
 }
 
-button, select {
+button {
     text-transform: none;
     cursor: pointer;
     padding: 15px;
@@ -338,6 +338,7 @@ button, select {
     font-size: 1rem;
     text-transform: uppercase;
     transition: 0.25s ease;
+    
 }
 
 /* Media queries */

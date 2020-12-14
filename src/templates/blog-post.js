@@ -3,6 +3,9 @@ import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import download from "downloadjs";
+
+require("downloadjs");
 
 const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark
@@ -26,7 +29,7 @@ const BlogPostTemplate = ({ data, location }) => {
         <section>
           <h3>Congrats!</h3>
           <p>We are so excited for your journey! We are looking forward to coming alongside every step of the way. For more information about what to do next, <a href="https://www.olivebaptist.org/growth-track" target="_blank">click here</a>.</p>
-          <a href={post.frontmatter.video} download="${post.frontmatter.name}.mp4"><button>Download Baptism Video</button></a>
+          <button onClick={download(post.frontmatter.video)}>Download Baptism Video</button>
         </section>
         <video width="100%" controls>
           <source src={post.frontmatter.video ? post.frontmatter.video : ''} />
