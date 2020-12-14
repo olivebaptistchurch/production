@@ -12,19 +12,17 @@ media_library:
     api_key: 238175576452882
 
 collections:
-  - name: 'blog'
-    label: 'Blog'
-    folder: 'content/blog'
+  - name: 'baptisms'
+    label: 'Baptisms'
+    folder: 'content/baptisms'
     create: true
     slug: 'index'
     media_folder: ''
     public_folder: ''
-    path: '{{title}}/index'
+    path: '{{name}}/index'
     editor:
       preview: false
     fields:
-      - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
-      - { label: 'Description', name: 'description', widget: 'string' }
-      - { label: 'Body', name: 'body', widget: 'markdown' }
+      - { label: 'Name', name: 'name', widget: 'string' }
+      - { label: 'Baptism Date', name: 'date', widget: 'datetime' }
       - { label: 'Video', name: 'video', widget: 'file' }
