@@ -2,8 +2,14 @@ backend:
   name: git-gateway
   branch: master
 
-media_folder: content/img
+media_folder: static/img
 public_folder: /img
+
+media_library:
+  name: cloudinary
+  config:
+    cloud_name: olive-baptist-church
+    api_key: 238175576452882
 
 collections:
   - name: 'blog'
