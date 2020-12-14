@@ -29,6 +29,9 @@ const BlogPostTemplate = ({ data, location }) => {
           dangerouslySetInnerHTML={{ __html: post.html }}
           itemProp="articleBody"
         />
+        <video>
+          <source src={post.frontmatter.video ? post.frontmatter.video : ''} />
+        </video>
         <hr />
         <footer>
           <Bio />
@@ -51,9 +54,7 @@ const BlogPostTemplate = ({ data, location }) => {
               </Link>
             )}
           </li>
-          <video>
-            <source src={next.frontmatter.video} />
-          </video>
+          
           <li>
             {next && (
               <Link to={next.fields.slug} rel="next">
