@@ -10,7 +10,7 @@ require("downloadjs");
 const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark
   const siteTitle = data.site.siteMetadata?.title || `Title`
-
+ds
   return (
     <Layout location={location} title={siteTitle}>
       <SEO
@@ -31,7 +31,7 @@ const BlogPostTemplate = ({ data, location }) => {
           <p>We are so excited for your journey! We are looking forward to coming alongside every step of the way. For more information about what to do next, <a href="https://www.olivebaptist.org/growth-track" target="_blank">click here</a>.</p>
           <button onClick={(typeof window !== 'undefined' && window) ? download(post.frontmatter.video) : '' }>Download Baptism Video</button>
         </section>
-        <video width="100%" controls>
+        <video width="100%" poster={post.frontmatter.videoImage} controls>
           <source src={post.frontmatter.video ? post.frontmatter.video : ''} />
         </video>
       </article>
@@ -58,6 +58,7 @@ export const pageQuery = graphql`
         name
         date(formatString: "MMMM DD, YYYY")
         video
+        videoImage
       }
     }
   }

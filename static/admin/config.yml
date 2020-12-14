@@ -26,3 +26,4 @@ collections:
       - { label: 'Name', name: 'name', widget: 'string' }
       - { label: 'Baptism Date', name: 'date', widget: 'datetime' }
       - { label: 'Video', name: 'video', widget: 'file' }
+      - { label: 'Video Image', name: 'videoImage', widget: 'file' }
