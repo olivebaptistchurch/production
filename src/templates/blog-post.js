@@ -22,10 +22,11 @@ const BlogPostTemplate = ({ data, location }) => {
           <h1 itemProp="headline">{post.frontmatter.name}</h1>
           <p>{post.frontmatter.date}</p>
         </header>
-        <section
-          dangerouslySetInnerHTML={{ __html: post.html }}
-          itemProp="articleBody"
-        />
+        <section>
+          <h3>Congrats!</h3>
+          <p>We are so excited for your journey! We are looking forward to coming alongside every step of the way. For more information about what to do next, <a href="https://www.olivebaptist.org/growth-track">click here</a>.</p>
+          <a href={post.frontmatter.video} download><button>Download Baptism Video</button></a>
+        </section>
         <video width="500" controls>
           <source src={post.frontmatter.video ? post.frontmatter.video : ''} />
         </video>
