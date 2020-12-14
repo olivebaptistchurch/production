@@ -51,6 +51,9 @@ const BlogPostTemplate = ({ data, location }) => {
               </Link>
             )}
           </li>
+          <video>
+            <source src={next.frontmatter.video} />
+          </video>
           <li>
             {next && (
               <Link to={next.fields.slug} rel="next">
@@ -85,6 +88,7 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
+        video
       }
     }
     previous: markdownRemark(id: { eq: $previousPostId }) {
