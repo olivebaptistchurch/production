@@ -27,7 +27,7 @@ const BlogPostTemplate = ({ data, location }) => {
           <p>We are so excited for your journey! We are looking forward to coming alongside every step of the way. For more information about what to do next, <a href="https://www.olivebaptist.org/growth-track">click here</a>.</p>
           <a href={post.frontmatter.video} download><button>Download Baptism Video</button></a>
         </section>
-        <video width="500" controls>
+        <video width="100%" controls>
           <source src={post.frontmatter.video ? post.frontmatter.video : ''} />
         </video>
       </article>
