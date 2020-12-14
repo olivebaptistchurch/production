@@ -12,6 +12,7 @@ const BlogPostTemplate = ({ data, location }) => {
     <Layout location={location} title={siteTitle}>
       <SEO
         title={post.frontmatter.name}
+        videoUrl={post.frontmatter.video}
       />
       <article
         className="blog-post"
@@ -24,7 +25,7 @@ const BlogPostTemplate = ({ data, location }) => {
         </header>
         <section>
           <h3>Congrats!</h3>
-          <p>We are so excited for your journey! We are looking forward to coming alongside every step of the way. For more information about what to do next, <a href="https://www.olivebaptist.org/growth-track">click here</a>.</p>
+          <p>We are so excited for your journey! We are looking forward to coming alongside every step of the way. For more information about what to do next, <a href="https://www.olivebaptist.org/growth-track" target="_blank">click here</a>.</p>
           <a href={post.frontmatter.video} download="${post.frontmatter.name}.mp4"><button>Download Baptism Video</button></a>
         </section>
         <video width="100%" controls>
