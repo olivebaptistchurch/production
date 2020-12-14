@@ -29,7 +29,7 @@ const BlogPostTemplate = ({ data, location }) => {
           dangerouslySetInnerHTML={{ __html: post.html }}
           itemProp="articleBody"
         />
-        <video>
+        <video width="500" controls>
           <source src={post.frontmatter.video ? post.frontmatter.video : ''} />
         </video>
         <hr />
