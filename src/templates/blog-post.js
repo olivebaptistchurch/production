@@ -10,7 +10,7 @@ require("downloadjs");
 const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark
   const siteTitle = data.site.siteMetadata?.title || `Title`
-ds
+
   return (
     <Layout location={location} title={siteTitle}>
       <SEO
